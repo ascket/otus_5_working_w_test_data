@@ -32,6 +32,6 @@ with open(CSV_FILE_PATH) as file:
         except StopIteration:
             break
 
-with open(get_path("result2.json"), "w") as f:
-    s = json.dumps(users_with_books, indent=4)
-    f.write(s)
+with open(get_path("result.json"), "w") as file:
+    strg = json.dumps(users_with_books, indent=4)
+    file.write(strg)
