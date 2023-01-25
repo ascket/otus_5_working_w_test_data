@@ -11,12 +11,12 @@ with open(JSON_FILE_PATH) as file:
 with open(CSV_FILE_PATH) as file:
     books = csv.reader(file)
     header = next(books)
-    for x in range(len(users)):
+    for user in users:
         users_with_books.append({
-            "name": users[x]["name"],
-            "gender": users[x]["gender"],
-            "address": users[x]["address"],
-            "age": users[x]["age"],
+            "name": user["name"],
+            "gender": user["gender"],
+            "address": user["address"],
+            "age": user["age"],
             "books": []
         })
     while True:
