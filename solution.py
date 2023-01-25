@@ -21,9 +21,9 @@ with open(CSV_FILE_PATH) as file:
         })
     while True:
         try:
-            for x in range(len(users_with_books)):
+            for user in users_with_books:
                 book = next(books)
-                users_with_books[x]["books"].append({
+                user["books"].append({
                     "title": book[0],
                     "author": book[1],
                     "pages": book[3],
